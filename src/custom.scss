@@ -1,0 +1,31 @@
+$bg-color: white;
+$white : #fff;
+$black : #000;
+
+@function set-text-color($color) {
+    @if (lightness( $color ) > 20) {
+      @return $black; // Lighter color
+    }
+    @else {
+      @return $white; // Darker color
+    }
+}
+
+.text--color {
+    background: $bg-color;
+    color: set-text-color($bg-color);
+}
+
+.text {
+    padding: 10px;
+    text-align: center;
+}
+
+.two{
+    padding-bottom: 200px;
+}
+.video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
